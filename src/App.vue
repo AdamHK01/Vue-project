@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <!-- 顶部header区域 -->
+    <!-- 顶部header区域 --> 
     <mt-header fixed title="阿达商城"></mt-header>
     <!-- 中间的路由 router-view 区域 -->
 
