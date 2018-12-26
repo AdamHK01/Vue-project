@@ -3,7 +3,9 @@
     <!-- 顶部header区域 --> 
     <mt-header fixed title="阿达商城"></mt-header>
     <!-- 中间的路由 router-view 区域 -->
-
+		<transition>
+				<router-view></router-view>	
+		</transition>	
     <!-- 底部tabbar区域 -->
     <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
@@ -16,7 +18,7 @@
 			</router-link>
 			<router-link class="mui-tab-item" to="/shopcar">
 				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
-					<span class="mui-badge">0</span>
+					<span class="mui-badge">	0</span>
 				</span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
@@ -36,5 +38,20 @@
 .app-container{
   padding-top: 40px;
   // background-color: red;
+	overflow-x: hidden;
+}
+.v-enter{
+	opacity: 0;
+	transform: translateX(100%);
+	// position: absolute;
+}
+.v-leave-to{
+	opacity: 0;
+	transform: translateX(-100%);	
+	position: absolute;
+}
+.v-enter-active,
+.v-leave-active{
+	transition: all 0.5s ease
 }
 </style>
